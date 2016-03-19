@@ -1,27 +1,3 @@
-<?php
-
-if(isset($_POST['send'])) {
-   // Prepare the email
-$to = 'designcampstudios@gmail.com';
-
-$name = $_POST['name'];
-$mail_from = $_POST['email'];
-   $subject = 'Summer Camp Inquiry';
-   $message = $_POST['message'];
-
-$header = "From: $name <$mail_from>";
-
-   // Send it
-   $sent = mail($to, $subject, $message, $header);
-   if($sent) {
-   echo 'Your message has been sent successfully!';
-   } else {
-   echo 'Sorry, your message could not send.';
-   }
-}
-
-?>
-
 <!DOCTYPE HTML>
 <!--
 	Hyperspace by HTML5 UP
@@ -274,7 +250,7 @@ $header = "From: $name <$mail_from>";
 							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
 							<div class="split style3">
 								<section>
-									<form method="post" action="index.php">
+									<form method="post" action="contact.php">
 										<div class="field half first">
 											<label for="name">Name</label>
 											<input type="text" name="name" id="name" />
